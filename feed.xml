@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>베이직의 개발 블로그</title>
+    <link>BasixKOR.github.io/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>개발 관련 내용을 올리겟죠</description>
+    <pubDate>Fri, 13 Jan 2017 20:59:29 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hexo로 블로그 만들기</title>
+      <link>BasixKOR.github.io/2017/01/14/Hexo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <guid>BasixKOR.github.io/2017/01/14/Hexo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <pubDate>Fri, 13 Jan 2017 20:57:48 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;안녕하세요! 이 글에서는 Hexo로 블로그를 뚝딱 만들어내는 방법을 소개합니다. 이 글을 따라하다 보면 어느새 당신도 블로그를!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;준비물&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 계정&lt;/li&gt;
+&lt;li&gt;Node.
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>안녕하세요! 이 글에서는 Hexo로 블로그를 뚝딱 만들어내는 방법을 소개합니다. 이 글을 따라하다 보면 어느새 당신도 블로그를!</p>
+<p><strong>준비물</strong></p>
+<ul>
+<li>GitHub 계정</li>
+<li>Node.js (없으면 <a href="https://nodejs.org/ko" target="_blank" rel="external">여기서</a>)</li>
+<li>Hexo CLI (없으면 <code>$ npm install hexo-cli -g</code>)</li>
+</ul>
+<h2 id="GitHub-레포-만들기"><a href="#GitHub-레포-만들기" class="headerlink" title="GitHub 레포 만들기"></a>GitHub 레포 만들기</h2><p>GitHub에 <code>자신의유저네임.github.io</code>라는 repo를 만들어주시면 됩니다.</p>
+<h2 id="Hexo-폴더-만들기"><a href="#Hexo-폴더-만들기" class="headerlink" title="Hexo 폴더 만들기"></a>Hexo 폴더 만들기</h2><p><code>$ hexo init 너의폴더명은</code>을 쳐서 당신이 쓸 Hexo의 폴더를 만들어주세요!</p>
+<h2 id="Hexo-설정-수정하기"><a href="#Hexo-설정-수정하기" class="headerlink" title="Hexo 설정 수정하기"></a>Hexo 설정 수정하기</h2><p>자, 블로그를 재대로 설정하려면 설정을 건드려야만 하죠! 방금 전에 만든 Hexo 폴더에서 <code>_config.yml</code>을 열어주세요! 그리고 이렇게 만들어주세요!</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> 당신 블로그의 이름은 무엇인가요?</div><div class="line"><span class="attr">subtitle:</span> 부제목도 준비하셧나요? 멋지네요!</div><div class="line"><span class="attr">description:</span> 블로그를 설명해주세요!</div><div class="line"><span class="attr">author:</span> 당신의 이름은?</div><div class="line"><span class="attr">lanugage:</span> ko</div><div class="line"><span class="attr">timezone:</span> Asia/Seoul</div><div class="line"><span class="attr">url:</span> 깃허브유저네임.github.io</div><div class="line"></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">        type:</span> git</div><div class="line"><span class="attr">        repository:</span> git@github.com:깃헙유저네임/깃헙유저네임.github.io.git</div><div class="line"><span class="attr">        branch:</span> master</div><div class="line"><span class="attr">        message:</span> 블로그 업데이트</div></pre></td></tr></table></figure>
+<p>자 완료! 당신의 블로그 기초 설정은 끝났습니다. 그런데 블로그가 뭐 하는 곳이죠?</p>
+<h2 id="첫-포스팅"><a href="#첫-포스팅" class="headerlink" title="첫 포스팅!"></a>첫 포스팅!</h2><p>고맙게도, Hexo CLI는 이미 당신의 첫번째 포스트를 준비해놧답니다! 하지만 모두 의미 모를 영어군요! 2번째로 나오는 <code>---</code> 이후부터는 다 날려버리세요!</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line"><span class="section">title: Hello World</span></div><div class="line">---</div><div class="line">여기에 마크다운으로 글을 작성하시면 됩니다!</div></pre></td></tr></table></figure>
+<h2 id="가기-전-잠시-테스트"><a href="#가기-전-잠시-테스트" class="headerlink" title="가기 전 잠시 테스트"></a>가기 전 잠시 테스트</h2><p>일단 당신 블로그가 어떤 모습인지는 알고 올려야겟죠? <code>$ hexo server</code>를 입력한 후, <a href="http://localhost:4000" target="_blank" rel="external">이 링크</a>을 입력하면.. 짜잔! 당신의 블로그랍니다!</p>
+<h2 id="이제-웹사이트로"><a href="#이제-웹사이트로" class="headerlink" title="이제 웹사이트로!"></a>이제 웹사이트로!</h2><p>자, 일단 우리가 이 멋진 블로그를 완성하기 전에.. 잊고 설치하지 않은 것들을 설치해야 합니다. <code>$ npm install hexo-deployer-git --save</code>로 설치하면 됩니다.<br>이제.. <code>hexo d -g</code>를 입력합니다! 그리고 조금 기다린 다음 username.github.io로 들어가면 멋진 당신의 블로그가 있을 겁니다!</p>
+]]></content:encoded>
+      
+      <comments>BasixKOR.github.io/2017/01/14/Hexo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>BasixKOR.github.io/2017/01/14/hello-world/</link>
+      <guid>BasixKOR.github.io/2017/01/14/hello-world/</guid>
+      <pubDate>Fri, 13 Jan 2017 19:48:58 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Frontend&lt;/li&gt;
+&lt;li&gt;Android&lt;/li&gt;
+&lt;li&gt;.NET &lt;em&gt;(약간ㅎ)&lt;/em&gt;&lt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!</p>
+<ul>
+<li>Node.js</li>
+<li>Frontend</li>
+<li>Android</li>
+<li>.NET <em>(약간ㅎ)</em></li>
+</ul>
+<p>이러한 글들을 올릴 거에요! 잘 부탁드려요!</p>
+]]></content:encoded>
+      
+      <comments>BasixKOR.github.io/2017/01/14/hello-world/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
