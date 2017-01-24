@@ -37,7 +37,7 @@ lexor
 
 평가 기준
 toke">
-<meta property="og:updated_time" content="2017-01-24T22:52:08.018Z">
+<meta property="og:updated_time" content="2017-01-24T23:03:33.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript Lexer 고르기">
 <meta name="twitter:description" content="최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져본 결과,다음과 같은 라이브러리들을 찾아냈다.
@@ -103,9 +103,9 @@ toke">
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/feed.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/feed.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="BasixKOR.github.io"></form>
@@ -120,6 +120,10 @@ toke">
   <time datetime="2017-01-24T22:30:45.000Z" itemprop="datePublished">2017-01-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a>►<a class="article-category-link" href="/categories/Node-js/Javascript/">Javascript</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -189,14 +193,16 @@ toke">
 <p>API 문서, 충분한 자료는 내가 준 점수다. 10점이 만점이긴.. 한데 아무도 만점은 못 받음. 자주 관리와 퀄리티는 <a href="npms.io">npms.io</a>가 준 점수다.<br>lexor은 정말 예제 코드 하나 없었다. 이름은 예뻣는데 아쉽다.. 일단 내가 보기에는 <strong>tokenizr</strong>와 <strong>wolf-lexer</strong>이 괜찮은 해답으로 보인다.</p>
 <h2 id="tokenizr"><a href="#tokenizr" class="headerlink" title="tokenizr"></a>tokenizr</h2><p>일단 이 녀석을 먼저 발견하기도 했고 리드미가 살짝 더 예쁘므로 이쪽을 먼저 적용했다. parser로 코드를 분기하고 파서를 짠 다음 테스트해봤는데..</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ParsingError: token not recognized</div><div class="line"> at new t (node_modules/tokenizr/lib/tokenizr.js:30:1280)</div><div class="line"> at t.value (node_modules/tokenizr/lib/tokenizr.js:34:10503)</div><div class="line"> at t.value (node_modules/tokenizr/lib/tokenizr.js:34:7561)</div><div class="line"> at t (node_modules/tokenizr/lib/tokenizr.js:34:7659)</div><div class="line"> at t.value (node_modules/tokenizr/lib/tokenizr.js:34:7905)</div><div class="line"> at module.exports (utils/namumark.js:14:28)</div><div class="line"> at Context.&lt;anonymous&gt; (test/test.js:36:5)</div></pre></td></tr></table></figure>
-<p>이 오류가 문서에 내용이 있겟거니 하고 둘러봣건만.. 없었다. 메시지를 구글 번역에 돌려보니 토큰이 인식되지 않았다고 한다..???<br>테스트 코드에서는 별다른 문제가 안 보였다. 토큰으로 처리 안한 다른 문자가 문제인 것 같다. 테스트 케이스를 다르게 해봐도 상황은 달라지지 않았다.<br>하지만 조금 수정을 가했더니 더 이상 저 오류는 보이지 않았다. 역시 그냥 내가 잘못 한듯.. 다만 <code>.+</code> 때문에 볼드가 인식되지 않았다.<br>혹시 g 옵션을 제거하면 작동하지 않을까 싶어서 떼 봣다. 순서도 바꿔봤다. 가장 마지막에 토큰을 처리하도록 할 수는 없나?</p>
+<p>이 오류가 문서에 내용이 있겟거니 하고 둘러봣건만.. 없었다. 메시지를 구글 번역에 돌려보니 토큰이 인식되지 않았다고 한다..???<br>테스트 코드에서는 별다른 문제가 안 보였다. 토큰으로 처리 안한 다른 문자가 문제인 것 같다. 테스트 케이스를 다르게 해봐도 상황은 달라지지 않았다.<br>하지만 조금 수정을 가했더니 더 이상 저 오류는 보이지 않았다. 역시 그냥 내가 잘못 한듯.. 다만 <code>.+</code> 때문에 볼드가 인식되지 않았다.<br>혹시 g 옵션을 제거하면 작동하지 않을까 싶어서 떼 봣다. 순서도 바꿔봤다. 가장 마지막에 토큰을 처리하도록 할 수는 없나?<br>사실은 사실이다. 감싸진 것과 감싸지지 않은 것을 구분하는 것은 어렵다. 다른 파서 제작자들에게 존경을 표한다.<br>제일 파싱하기 어려운건 다름 아닌 <code>&lt;p&gt;</code>로 감싸질 부분이다. 이 소스가 얼마나 엉망이 될지 감 조차 안 잡힌다.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="BasixKOR.github.io/2017/01/25/Javascript-Lexer-고르기/" data-id="ciyc3jskk0001y9pvp9vsah8a" class="article-share-link">Share</a>
+      <a data-url="BasixKOR.github.io/2017/01/25/Javascript-Lexer-고르기/" data-id="ciyc3jskk0001y9pvp9vsah8a" class="article-share-link">Partager</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lexer/">Lexer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/일기/">일기</a></li></ul>
+
     </footer>
   </div>
   
@@ -205,7 +211,7 @@ toke">
   
   
     <a href="/2017/01/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -231,9 +237,9 @@ toke">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Javascript/">Javascript</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -241,9 +247,9 @@ toke">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/안내/">안내</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lexer/">Lexer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/안내/">안내</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/일기/">일기</a></li></ul>
     </div>
   </div>
 
@@ -251,9 +257,9 @@ toke">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/안내/" style="font-size: 10px;">안내</a>
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Lexer/" style="font-size: 10px;">Lexer</a> <a href="/tags/안내/" style="font-size: 10px;">안내</a> <a href="/tags/일기/" style="font-size: 10px;">일기</a>
     </div>
   </div>
 
@@ -270,7 +276,7 @@ toke">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -299,7 +305,7 @@ toke">
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 BasixKOR (Jeon Sung)<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
