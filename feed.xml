@@ -8,7 +8,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>개발 관련 내용을 올리겟죠</description>
-    <pubDate>Tue, 24 Jan 2017 22:30:45 GMT</pubDate>
+    <pubDate>Tue, 24 Jan 2017 22:33:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,13 +18,13 @@
       <pubDate>Tue, 24 Jan 2017 22:30:45 GMT</pubDate>
       <description>
       
-        &lt;p&gt;최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.&lt;br&gt;그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.&lt;/p&gt;
+        &lt;p&gt;최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져본 결과,&lt;br&gt;다음과 같은 라이브러리들을 찾아냈다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href
+&lt;li&gt;&lt;a href=&quot;https://gi
       
       </description>
       
-      <content:encoded><![CDATA[<p>최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.<br>그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.</p>
+      <content:encoded><![CDATA[<p>최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져본 결과,<br>다음과 같은 라이브러리들을 찾아냈다.</p>
 <ul>
 <li><a href="https://github.com/rse/tokenizr" target="_blank" rel="external">tokenizr</a> (이름을 항상 까먹음)</li>
 <li><a href="https://github.com/elmasse/yalex" target="_blank" rel="external">yalex</a></li>
