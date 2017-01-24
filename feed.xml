@@ -8,8 +8,107 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>개발 관련 내용을 올리겟죠</description>
-    <pubDate>Fri, 13 Jan 2017 20:59:29 GMT</pubDate>
+    <pubDate>Tue, 24 Jan 2017 22:30:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Javascript Lexer 고르기</title>
+      <link>BasixKOR.github.io/2017/01/25/Javascript-Lexer-%EA%B3%A0%EB%A5%B4%EA%B8%B0/</link>
+      <guid>BasixKOR.github.io/2017/01/25/Javascript-Lexer-%EA%B3%A0%EB%A5%B4%EA%B8%B0/</guid>
+      <pubDate>Tue, 24 Jan 2017 22:30:45 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.&lt;br&gt;그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.<br>그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.</p>
+<ul>
+<li><a href="https://github.com/rse/tokenizr" target="_blank" rel="external">tokenizr</a> (이름을 항상 까먹음)</li>
+<li><a href="https://github.com/elmasse/yalex" target="_blank" rel="external">yalex</a></li>
+<li><a href="https://github.com/benoybose/wolf-lexer" target="_blank" rel="external">wolf-lexer</a></li>
+<li><p><a href="https://github.com/taoyuan/lexor" target="_blank" rel="external">lexor</a></p>
+<p>이 정도가 그나마 쓸만해 보여서, 이 들을 표로 보고 비교해보았다.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>평가 기준</th>
+<th>tokenizr</th>
+<th>yalex</th>
+<th>wolf-lexer</th>
+<th>lexor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API 문서</td>
+<td>8</td>
+<td>4</td>
+<td>8.5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>충분한 자료</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>자주 관리</td>
+<td>100%</td>
+<td>50%</td>
+<td>99%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>퀄리티</td>
+<td>61%</td>
+<td>81%</td>
+<td>91%</td>
+<td>93%</td>
+</tr>
+</tbody>
+</table>
+<p>API 문서, 충분한 자료는 내가 준 점수다. 10점이 만점이긴.. 한데 아무도 만점은 못 받음.<br>lexor은 정말 예제 코드 하나 없었다. 이름은 예뻣는데 아쉽다.. 일단 내가 보기에는 <strong>tokenizr</strong>와 <strong>wolf-lexer</strong>이 괜찮은 해답으로 보인다.</p>
+<h2 id="tokenizr"><a href="#tokenizr" class="headerlink" title="tokenizr"></a>tokenizr</h2><p>일단 이 녀석을 먼저 발견하기도 했고 리드미가 살짝 더 예쁘므로 이쪽을 먼저 적용했다.</p>
+]]></content:encoded>
+      
+      <comments>BasixKOR.github.io/2017/01/25/Javascript-Lexer-%EA%B3%A0%EB%A5%B4%EA%B8%B0/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>BasixKOR.github.io/2017/01/22/hello-world/</link>
+      <guid>BasixKOR.github.io/2017/01/22/hello-world/</guid>
+      <pubDate>Sun, 22 Jan 2017 11:23:21 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Frontend&lt;/li&gt;
+&lt;li&gt;Android&lt;/li&gt;
+&lt;li&gt;.NET &lt;em&gt;(약간ㅎ)&lt;/em&gt;&lt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!</p>
+<ul>
+<li>Node.js</li>
+<li>Frontend</li>
+<li>Android</li>
+<li>.NET <em>(약간ㅎ)</em></li>
+</ul>
+<p>이러한 글들을 올릴 거에요! 잘 부탁드려요!</p>
+]]></content:encoded>
+      
+      <comments>BasixKOR.github.io/2017/01/22/hello-world/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Hexo로 블로그 만들기</title>
@@ -45,35 +144,6 @@
 ]]></content:encoded>
       
       <comments>BasixKOR.github.io/2017/01/14/Hexo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>BasixKOR.github.io/2017/01/14/hello-world/</link>
-      <guid>BasixKOR.github.io/2017/01/14/hello-world/</guid>
-      <pubDate>Fri, 13 Jan 2017 19:48:58 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js&lt;/li&gt;
-&lt;li&gt;Frontend&lt;/li&gt;
-&lt;li&gt;Android&lt;/li&gt;
-&lt;li&gt;.NET &lt;em&gt;(약간ㅎ)&lt;/em&gt;&lt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>안녕하세요! 베이직입니다. 이제부터 여기에 개발글을 올릴거에요!! 일단 제가 올릴 것들은요!</p>
-<ul>
-<li>Node.js</li>
-<li>Frontend</li>
-<li>Android</li>
-<li>.NET <em>(약간ㅎ)</em></li>
-</ul>
-<p>이러한 글들을 올릴 거에요! 잘 부탁드려요!</p>
-]]></content:encoded>
-      
-      <comments>BasixKOR.github.io/2017/01/14/hello-world/#disqus_thread</comments>
     </item>
     
   </channel>

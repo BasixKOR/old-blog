@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Hexo | 베이직의 개발 블로그</title>
+  <title>Javascript Lexer 고르기 | 베이직의 개발 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="개발 관련 내용을 올리겟죠">
-<meta property="og:type" content="website">
-<meta property="og:title" content="베이직의 개발 블로그">
-<meta property="og:url" content="BasixKOR.github.io/tags/Hexo/index.html">
+  <meta name="description" content="최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.
+
+tokenizr (이름을 항상 까먹음)
+yalex
+wolf-lexer
+lexor
+이 정도가 그나마 쓸만해 보여서, 이 들을 표로 보고 비교해보았다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript Lexer 고르기">
+<meta property="og:url" content="BasixKOR.github.io/2017/01/25/Javascript-Lexer-고르기/index.html">
 <meta property="og:site_name" content="베이직의 개발 블로그">
-<meta property="og:description" content="개발 관련 내용을 올리겟죠">
+<meta property="og:description" content="최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.
+
+tokenizr (이름을 항상 까먹음)
+yalex
+wolf-lexer
+lexor
+이 정도가 그나마 쓸만해 보여서, 이 들을 표로 보고 비교해보았다.">
+<meta property="og:updated_time" content="2017-01-24T22:30:45.949Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="베이직의 개발 블로그">
-<meta name="twitter:description" content="개발 관련 내용을 올리겟죠">
+<meta name="twitter:title" content="Javascript Lexer 고르기">
+<meta name="twitter:description" content="최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.
+
+tokenizr (이름을 항상 까먹음)
+yalex
+wolf-lexer
+lexor
+이 정도가 그나마 쓸만해 보여서, 이 들을 표로 보고 비교해보았다.">
 <meta name="twitter:creator" content="@Basix1120">
   
     <link rel="alternate" href="/feed.xml" title="베이직의 개발 블로그" type="application/atom+xml">
@@ -74,39 +93,103 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/01/14/Hexo로-블로그-만들기/" class="archive-article-date">
-  <time datetime="2017-01-13T20:57:48.000Z" itemprop="datePublished">Jan 14</time>
+        <section id="main"><article id="post-Javascript-Lexer-고르기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/25/Javascript-Lexer-고르기/" class="article-date">
+  <time datetime="2017-01-24T22:30:45.000Z" itemprop="datePublished">2017-01-25</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/14/Hexo로-블로그-만들기/">Hexo로 블로그 만들기</a>
+    <h1 class="article-title" itemprop="name">
+      Javascript Lexer 고르기
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>최근 deesle를 개발하면서 또 replace + 정규식 떡칠을 하다 이건 아니다 싶어서 새로 Lexer 라이브러리들을 미친듯이 뒤져봣습니다.<br>그 결과로 다음과 같은 라이브러리들을 찾을 수 있었습니다.</p>
+<ul>
+<li><a href="https://github.com/rse/tokenizr" target="_blank" rel="external">tokenizr</a> (이름을 항상 까먹음)</li>
+<li><a href="https://github.com/elmasse/yalex" target="_blank" rel="external">yalex</a></li>
+<li><a href="https://github.com/benoybose/wolf-lexer" target="_blank" rel="external">wolf-lexer</a></li>
+<li><p><a href="https://github.com/taoyuan/lexor" target="_blank" rel="external">lexor</a></p>
+<p>이 정도가 그나마 쓸만해 보여서, 이 들을 표로 보고 비교해보았다.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>평가 기준</th>
+<th>tokenizr</th>
+<th>yalex</th>
+<th>wolf-lexer</th>
+<th>lexor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API 문서</td>
+<td>8</td>
+<td>4</td>
+<td>8.5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>충분한 자료</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>자주 관리</td>
+<td>100%</td>
+<td>50%</td>
+<td>99%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>퀄리티</td>
+<td>61%</td>
+<td>81%</td>
+<td>91%</td>
+<td>93%</td>
+</tr>
+</tbody>
+</table>
+<p>API 문서, 충분한 자료는 내가 준 점수다. 10점이 만점이긴.. 한데 아무도 만점은 못 받음.<br>lexor은 정말 예제 코드 하나 없었다. 이름은 예뻣는데 아쉽다.. 일단 내가 보기에는 <strong>tokenizr</strong>와 <strong>wolf-lexer</strong>이 괜찮은 해답으로 보인다.</p>
+<h2 id="tokenizr"><a href="#tokenizr" class="headerlink" title="tokenizr"></a>tokenizr</h2><p>일단 이 녀석을 먼저 발견하기도 했고 리드미가 살짝 더 예쁘므로 이쪽을 먼저 적용했다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="BasixKOR.github.io/2017/01/25/Javascript-Lexer-고르기/" data-id="ciyc3jskk0001y9pvp9vsah8a" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
